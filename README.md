@@ -21,22 +21,20 @@ In a worst case tree may be tall and have two subtrees with N and M nodes
             |   |
             n3  m3
             ... ...
-            nN
-            ... mN
-                ...
+            nN  mN
+            ... ...
                 mM
                 ...
 
 
-nN and mM - two nodes
-N and M - heights of each subtree
+nN and mM - two nodes, N and M - heights of each subtree
 
 - function ``_get_values_path`` returns a path from the node to root.
 In worst case the nodes are bottom nodes and finding the path will occure N operations for the left subtree and M operations in right subtree
 
 - function ``_first_value_intersect`` has nested loop, in the worst case the ROOT is a common ancestor, so there will be N * M iterations to find common item in two arrays
 
-Complexity is O(M + N + N*M) which is close to O(N*M)
+Complexity is O(M + N + N * M) which is close to O(N * M)
 
 If a the tree were self-balanced search tree, than the height can be found like:
     N = M = log2 n, where n - amount of nodes in tree
